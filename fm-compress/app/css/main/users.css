@@ -1,0 +1,438 @@
+body {
+  min-height: 100vh;
+  background-color: var(--backgroundColor);
+}
+
+/********* BOXES ****************/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(rgb(48, 58, 58), rgba(0, 0, 0, 0.3)), url(../../../img/tree.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  /* background-color: var(--backgroundColor); */
+}
+.namePicture {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 25vh;
+  gap: 8%;
+}
+.namePicture #introText {
+  display: flex;
+}
+.namePicture h2 {
+  text-align: center;
+  font-size: 200%;
+}
+.namePicture img {
+  margin: 1% 0;
+}
+
+.users {
+  width: 80%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+.users .showUsers {
+  width: 30%;
+  background-color: var(--onyxgrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  border-radius: 50px;
+
+  /*********************/
+  background: rgba(56, 56, 56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  border: 1px solid rgba(56, 56, 56, 0.08);
+  /*********************/
+}
+.users .showUsers h2,
+.users .newUser h2 {
+  border-bottom: 2px solid var(--pinkheavy);
+}
+.users .showUsers .listUsers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.users .showUsers .listUsers ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.users .showUsers .listUsers li {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10%;
+  font-size: 130%;
+}
+.users .newUser {
+  width: 90%;
+  background-color: var(--onyxgrey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  border-radius: 50px;
+
+  /*********************/
+  background: rgba(56, 56, 56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  border: 1px solid rgba(56, 56, 56, 0.08);
+  /*********************/
+}
+.users .groupDivsUsers {
+  display: flex;
+  height: 80%;
+  align-items: center;
+}
+.users .newUser .groupDivsUsers .formNewUser {
+  display: flex;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+  flex-wrap: wrap;
+}
+.users .newUser .groupDivsUsers .formNewUser img{
+  margin-top: 5%;
+  width: 9%;
+}
+.users .newUser .formNewUser input,
+.users .newUser .formNewUser select {
+  width: 40%;
+  margin-top: 2%;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+.users .newUser .formNewUser input[type="submit"] {
+  border: none;
+  font-size: larger;
+  background-color: var(--maincolor);
+  color: white;
+}
+.users .newUser .formNewUser input[type="submit"]:hover {
+  background-color: var(--pinkheavy);
+}
+.users .newUser .groupDivsUsers .informationUsers {
+  margin-top: 1%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  border: none;
+}
+.users .newUser .groupDivsUsers .informationUsers .infoUsers h3,
+.users .newUser .groupDivsUsers .informationUsers .infoPassword h3 {
+  text-align: center;
+  margin-bottom: 1%;
+}
+.users .newUser .groupDivsUsers .informationUsers .infoUsers .example {
+  font-style: italic;
+}
+.users .newUser .groupDivsUsers .informationUsers .generators {
+  display: flex;
+  flex-direction: column;
+  background-color: #9b5094;
+  padding: 1%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: fit-content;
+  gap: 10%;
+  justify-content: center;
+}
+.users
+  .newUser
+  .groupDivsUsers
+  .informationUsers
+  .generators
+  .usernameGenerator
+  p,
+.users
+  .newUser
+  .groupDivsUsers
+  .informationUsers
+  .generators
+  .passwordGenerator
+  p {
+  margin: 1% 0;
+}
+.users
+  .newUser
+  .groupDivsUsers
+  .informationUsers
+  .generators
+  .usernameGenerator
+  input[type="button"],
+.users
+  .newUser
+  .groupDivsUsers
+  .informationUsers
+  .generators
+  .passwordGenerator
+  input[type="button"] {
+  text-decoration: none;
+  color: var(--pinkheavy);
+  background-color: white;
+  border-radius: 5px;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 1%;
+}
+.users
+  .newUser
+  .groupDivsUsers
+  .informationUsers
+  .generators
+  .usernameGenerator
+  input[type="button"]:hover,
+.users
+  .newUser
+  .groupDivsUsers
+  .informationUsers
+  .generators
+  .passwordGenerator
+  input[type="button"]:hover {
+  background-color: var(--maincolor);
+  color: white;
+}
+
+
+.users .newUser .groupDivsUsers .informationUsers .infoPassword {
+  display: flex;
+  flex-direction: column;
+}
+.users .newUser .groupDivsUsers .informationUsers .infoPassword > *:not(h3) {
+  display: flex;
+  gap: 4%;
+  justify-content: start;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border: 1px solid rgb(165, 23, 23);
+  border-radius: 50%;
+}
+.required {
+  border: 3px solid var(--maincolor) !important;
+}
+/*.faq{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    background-color: var(--onyxgrey);
+    border-radius: 50px;
+    margin-bottom: 2%;
+}
+.faq .listUsers, .faq .question2, .faq .question3, .faq .question4, .faq .question5{
+    margin: 0 5%;
+}
+.newUser{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    background-color: var(--onyxgrey);
+    border-radius: 50px;
+    
+}
+.faq h2, .newUser h2{
+    font-size: 200%;
+    width: fit-content;
+    border-bottom: 2px solid var(--pinkheavy);
+    margin-bottom: 2%;
+}
+
+.newUser .users1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    gap: 5%;
+}
+.newUser .users1 .colInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    gap: 15%;
+    margin-left: 5%;
+}
+.newUser .users1 .downloads{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newUser .users1 .downloads a{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newUser .users1 .downloads img{
+    width: 50%;
+    margin-top: 5%;
+}
+.newUser .users1 .information{
+    margin-top: 15%;
+}
+.newUser .users1 .information ul{
+    list-style: none;
+}
+.newUser .users1 .information li{
+    margin-top: 5%;
+}
+.newUser .users1 .formIncidence{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    width: 60%;
+}
+.newUser .users1 .formIncidence .formInci{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.newUser .users1 .formIncidence h3{
+    margin-bottom: 3%;
+}
+.newUser .users1 .formIncidence .formInci p{
+    margin-top: 5%;
+}
+.newUser .users1 .formIncidence .formInci input, .newUser .users1 .formIncidence .formInci textarea{
+    font-size: larger;
+    margin-top: 5%;
+    border: none;
+    border-radius: 5px;
+}
+.newUser .users1 .formIncidence .buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.newUser .users1 .formIncidence .buttons input[type=submit]{
+    border: none;
+    font-size: larger;
+    width: 150%;
+    margin-top: 40%;
+    margin-bottom: 10%;
+    border: none;
+    border-radius: 5px;
+}
+.newUser .users1 .formIncidence .buttons input[type=submit]:hover{
+    background-color: var(--maincolor);
+    color: aliceblue;
+}
+.newUser .users1 .formGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.newUser .users1 .formGroup h3{
+    margin-bottom: 3%;
+}
+.newUser .users1 .formGroup p{
+    margin-top: 10px;
+}
+.newUser .users1 .formGroup input, .newUser .users1 .formGroup select{
+    font-size: larger;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.newUser .users1 .formGroup .buttons input[type=submit]{
+
+    border: none;
+    font-size: larger;
+    width: 130%;
+    margin-top: 40%;
+    margin-bottom: 10%;
+}
+.newUser .users1 .formGroup .buttons input[type=submit]:hover{
+    background-color: var(--maincolor);
+    color: aliceblue;
+}
+.newUser .formChangePass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: -10%;
+}
+.newUser .formChangePass h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.newUser .formChangePass .changePassword{
+    display: flex;
+    gap: 5%;
+}
+.newUser .formChangePass .changePassword .buttons input[type=submit]{
+    border: none;
+    font-size: larger;
+    width: 130%;
+    height: 60%;
+    border-radius: 5px;
+    background-color: var(--maincolor);
+}
+.newUser .formChangePass .changePassword .buttons input[type=submit]:hover{
+    color: var(--maincolor);
+    background-color: aliceblue;
+}*/

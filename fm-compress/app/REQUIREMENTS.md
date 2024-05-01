@@ -1,0 +1,6 @@
+- Apache2
+- Mysql/MariaDB
+- Perl
+- PHP7.4
+- Librrd-dev 
+- rrdtool 

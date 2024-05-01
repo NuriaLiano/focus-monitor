@@ -1,0 +1,213 @@
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgb(48, 58, 58), rgba(0, 0, 0, 0.3)), url(../../../img/tree.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  /* background-color: var(--backgroundColor); */
+}
+
+/********* BOXES ****************/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#btnPassword  {
+  width: 25%;
+  margin-left: 5%;
+  margin-top: 1%;
+  border: none;
+  font-size: larger;
+  border-radius: 5px;
+  background-color: var(--maincolor);
+}
+.namePicture {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 25vh;
+  gap: 8%;
+}
+.namePicture #introText {
+  display: flex;
+}
+.namePicture h2 {
+  text-align: center;
+  font-size: 200%;
+}
+.namePicture img {
+  margin: 1% 0;
+  width: 8%;
+}
+
+.data {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.profileResume {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+  background-color: var(--onyxgrey);
+  border-radius: 50px;
+  margin-bottom: 2%;
+  /*********************/
+  background: rgba(56, 56, 56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  border: 1px solid rgba(56, 56, 56, 0.08);
+  /*********************/
+}
+.modifyData {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 50px;
+  /*********************/
+  background: rgba(56, 56, 56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  border: 1px solid rgba(56, 56, 56, 0.08);
+  /*********************/
+}
+.profileResume h2,
+.modifyData h2 {
+  font-size: 200%;
+  width: fit-content;
+  border-bottom: 2px solid var(--pinkheavy);
+  margin-bottom: 2%;
+}
+.profileResume .personal,
+.profileResume .group,
+.profileResume .general {
+  display: flex;
+  border: 2px solid var(--pinkheavy);
+  border-radius: 5px;
+  width: 100%;
+  height: 25%;
+}
+
+.modifyData .data1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  gap: 5%;
+  flex-wrap: wrap;
+  
+}
+
+.modifyData .data1 .formPersonal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  width: 100%;
+}
+.modifyData .data1 .formPersonal .dataForm{
+  display: flex;
+  flex-direction: row;
+}
+.modifyData .data1 .formPersonal .personal {
+  width: 100%;
+}
+.modifyData .data1 .formPersonal .personal p {
+  margin-top: 3%;
+}
+.modifyData .data1 .formPersonal .personal input, .modifyData .data1 .formPersonal .group input{
+  font-size: larger;
+  margin-top: 5%;
+  border: none;
+  border-radius: 5px;
+}
+.modifyData .data1 .formPersonal .group select{
+  font-size: larger;
+  margin-top: 5%;
+  border: none;
+  border-radius: 5px;
+}
+.modifyData .data1 .formPersonal .buttons input[type="submit"]:first-child{
+  margin-top: 15%;
+}
+.modifyData .data1 .formPersonal .buttons input[type="submit"] {
+  border: none;
+  font-size: larger;
+  border: none;
+  width: 60%;
+  padding: 0.3em;
+  border-radius: 5px;
+}
+.modifyData .data1 .formPersonal .buttons input[type="submit"]:hover {
+  background-color: var(--maincolor);
+  color: aliceblue;
+}
+.modifyData .formChangePass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.modifyData .formChangePass .changePassHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+  gap: 5%;
+}
+.modifyData .formChangePass .changePassHeader img{
+  width: 5%;
+}
+
+.modifyData .formChangePass .changePassword {
+  display: flex;
+  gap: 5%;
+}
+.modifyData .formChangePass .changePassword input{
+  font-size: large;
+  margin-top: 5%;
+  border: none;
+  border-radius: 5px;
+  margin-left: -15%;
+}
+.modifyData .formChangePass .changePassword .buttons input[type="submit"]{
+  border: none;
+  font-size: larger;
+  width: 130%;
+  height: 60%;
+  border-radius: 5px;
+  background-color: var(--maincolor);
+}
+.modifyData
+  .formChangePass
+  .changePassword
+  .buttons
+  input[type="submit"]:hover {
+  color: var(--maincolor);
+  background-color: aliceblue;
+}

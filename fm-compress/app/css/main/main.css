@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+:root {
+    --maincolor: #39C9BF;
+    --darkblue: #00171F;
+    --onyxgrey: #373838;
+    /*for dark mode*/
+    --backgroundColor: rgb(41, 41, 41);
+    --secondcolor: #9B5094;
+    --pinkheavy: #ad36a1;
+    --bluebell: #9A94BC;
+    --lightbackground: #E7ECEC;
+    /*for white mode*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--backgroundColor);
+    color: white;
+}
+
+svg {
+    font-size: 15px;
+}
+
+path {
+    /*stroke: greenyellow;*/
+
+    stroke-width: 2;
+    fill: none;
+}
+
+/* .axis path,
+line {
+    fill: none;
+    stroke: var(--maincolor);
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+} */
+
+.wrongInput{
+    border: 2px solid red !important;
+    background-color: rgb(236, 194, 194);
+}
+
+.titleIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 5%;
+    background-color: var(--maincolor);
+    border: 2px solid var(--pinkheavy);
+    border-radius: 10px;
+    padding: 1%;
+    color: var(--backgroundColor);
+}
+
+
+
+/***************** SIDE BAR *******************/
+.navigation {
+    background-color: var(--maincolor);
+    position: fixed;
+    width: 80px;
+    inset: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 10px solid var(--maincolor);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.navigation.active {
+    width: 300px;
+    transition: 1s;
+    border-radius: 20px;
+}
+
+.toggle {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    box-shadow: 5px 5pxx 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--pinkheavy);
+    transform: translateY(-5px);
+    transition: 1s;
+}
+
+.toggle::after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--pinkheavy);
+    transform: translateY(5px);
+    transition: 1s;
+}
+
+.navigation.active .toggle::before {
+    transform: translateY(0px) rotate(-405deg);
+}
+
+.navigation.active .toggle::after {
+    transform: translateY(0px) rotate(225deg);
+}
+.navigation ul {
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover {
+    background-color: aliceblue;
+    color: var(--onyxgrey);
+}
+
+.navigation ul li:nth-child(1) {
+    top: 20px;
+    margin-bottom: 40px;
+    background: none;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--onyxgrey);
+}
+
+.navigation ul li:hover:not(:first-child) a {
+    color: var(--pinkheavy);
+}
+
+.navigation ul li a .icon .logo {
+    width: 60px;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon i {
+    font-size: 1.5em;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}

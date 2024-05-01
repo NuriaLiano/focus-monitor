@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#web ui --> transfonter.org
+
+INPUT=$1 #ruta que se pasa por parametro 
+OUTPUT=${1%.*}
+
+ttf2woff $INPUT $OUTPUT.woff
+#woff2compress $INPUT

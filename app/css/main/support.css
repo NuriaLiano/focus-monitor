@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgb(48, 58, 58), rgba(0, 0, 0, 0.3)), url(../../../img/tree.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  /* background-color: var(--backgroundColor); */
+}
+
+/***************** SIDE BAR *******************/
+.navigation {
+  background-color: var(--maincolor);
+  position: fixed;
+  width: 80px;
+  inset: 20px;
+  border-left: 10px solid var(--maincolor);
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.5s;
+  z-index: 1;
+}
+.navigation.active {
+  width: 300px;
+  transition: 1s;
+  border-radius: 20px;
+}
+
+.toggle {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  box-shadow: 5px 5pxx 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--pinkheavy);
+  transform: translateY(-5px);
+  transition: 1s;
+}
+.toggle::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--pinkheavy);
+  transform: translateY(5px);
+  transition: 1s;
+}
+
+.navigation.active .toggle::before {
+  transform: translateY(0px) rotate(-405deg);
+}
+.navigation.active .toggle::after {
+  transform: translateY(0px) rotate(225deg);
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover {
+  background-color: aliceblue;
+  color: var(--onyxgrey);
+}
+.navigation ul li:nth-child(1) {
+  top: 20px;
+  margin-bottom: 40px;
+  background: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--onyxgrey);
+}
+
+.navigation ul li:hover:not(:first-child) a {
+  color: var(--pinkheavy);
+}
+
+.navigation ul li a .icon .logo {
+  width: 60px;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+.navigation ul li a .icon i {
+  font-size: 1.5em;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+/********* BOXES ****************/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.namePicture {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 25vh;
+  gap: 8%;
+}
+.namePicture #introText {
+  display: flex;
+}
+.namePicture h2 {
+  text-align: center;
+  font-size: 200%;
+}
+.namePicture img {
+  margin: 1% 0;
+}
+
+.data {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.faq {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  background-color: var(--onyxgrey);
+  border-radius: 50px;
+  margin-bottom: 2%;
+  /*********************/
+  background: rgba(56, 56, 56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  border: 1px solid rgba(56, 56, 56, 0.08);
+  /*********************/
+}
+.faq .question1,
+.faq .question2,
+.faq .question3,
+.faq .question4,
+.faq .question5 {
+  margin: 0 5%;
+}
+.incidenceForm {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+  background-color: var(--onyxgrey);
+  border-radius: 50px;
+  /*********************/
+  background: rgba(56, 56, 56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  border: 1px solid rgba(56, 56, 56, 0.08);
+  /*********************/
+}
+.faq h2,
+.incidenceForm h2 {
+  font-size: 200%;
+  width: fit-content;
+  border-bottom: 2px solid var(--pinkheavy);
+  margin-bottom: 2%;
+}
+
+.incidenceForm .data1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  gap: 5%;
+}
+.incidenceForm .data1 .colInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+  gap: 15%;
+  margin-left: 5%;
+}
+.incidenceForm .data1 .downloads {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.incidenceForm .data1 .downloads a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.incidenceForm .data1 .downloads img {
+  width: 50%;
+  margin-top: 5%;
+}
+.incidenceForm .data1 .information {
+  margin-top: 15%;
+}
+.incidenceForm .data1 .information ul {
+  list-style: none;
+}
+.incidenceForm .data1 .information li {
+  margin-top: 5%;
+}
+.incidenceForm .data1 .formIncidence {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  width: 60%;
+}
+.incidenceForm .data1 .formIncidence .formInci {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.incidenceForm .data1 .formIncidence h3 {
+  margin-bottom: 3%;
+}
+.incidenceForm .data1 .formIncidence .formInci p {
+  margin-top: 5%;
+}
+.incidenceForm .data1 .formIncidence .formInci input,
+.incidenceForm .data1 .formIncidence .formInci textarea {
+  font-size: larger;
+  margin-top: 5%;
+  border: none;
+  border-radius: 5px;
+}
+.incidenceForm .data1 .formIncidence .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.incidenceForm .data1 .formIncidence .buttons input[type="submit"] {
+  border: none;
+  font-size: larger;
+  width: 150%;
+  margin-top: 40%;
+  margin-bottom: 10%;
+  border: none;
+  border-radius: 5px;
+}
+.incidenceForm .data1 .formIncidence .buttons input[type="submit"]:hover {
+  background-color: var(--maincolor);
+  color: aliceblue;
+}
+.incidenceForm .data1 .formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.incidenceForm .data1 .formGroup h3 {
+  margin-bottom: 3%;
+}
+.incidenceForm .data1 .formGroup p {
+  margin-top: 10px;
+}
+.incidenceForm .data1 .formGroup input,
+.incidenceForm .data1 .formGroup select {
+  font-size: larger;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+}
+.incidenceForm .data1 .formGroup .buttons input[type="submit"] {
+  border: none;
+  font-size: larger;
+  width: 130%;
+  margin-top: 40%;
+  margin-bottom: 10%;
+}
+.incidenceForm .data1 .formGroup .buttons input[type="submit"]:hover {
+  background-color: var(--maincolor);
+  color: aliceblue;
+}
+.incidenceForm .formChangePass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-left: -10%;
+}
+.incidenceForm .formChangePass h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.incidenceForm .formChangePass .changePassword {
+  display: flex;
+  gap: 5%;
+}
+.incidenceForm .formChangePass .changePassword .buttons input[type="submit"] {
+  border: none;
+  font-size: larger;
+  width: 130%;
+  height: 60%;
+  border-radius: 5px;
+  background-color: var(--maincolor);
+}
+.incidenceForm
+  .formChangePass
+  .changePassword
+  .buttons
+  input[type="submit"]:hover {
+  color: var(--maincolor);
+  background-color: aliceblue;
+}
